@@ -1,0 +1,6 @@
+framework module Pods_BookCaseApp {
+  umbrella header "Pods-BookCaseApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

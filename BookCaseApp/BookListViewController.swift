@@ -8,8 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BookListViewController: UIViewController {
 
+    
+    convenience init(model: String) {
+        self.init()
+        print(model)
+        let service = ServiceBook()
+        service.load()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
