@@ -12,6 +12,6 @@ import Foundation
 class Books: Codable {
     
     let books: [Book]
-    let total: Int = 0
+    var total: Int = 0
     
 }

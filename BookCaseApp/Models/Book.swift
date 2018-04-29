@@ -24,8 +24,8 @@ class Files: Codable {
 class Book: Codable {
     
     let id: Int = 0
-    let title: String = ""
-    let subtitle: String = ""
+    var title: String = ""
+    var subtitle: String = ""
     let bookPartLink: String = ""
     let badges: [String] = []
     let similarBooks: [String] = []

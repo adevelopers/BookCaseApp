@@ -15,7 +15,9 @@ class BookListViewController: UIViewController {
         self.init()
         print(model)
         let service = ServiceBook()
-        service.load()
+        service.load { books in
+            
+        }
         
     }
     

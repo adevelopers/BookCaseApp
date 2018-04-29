@@ -13,22 +13,32 @@ class ServiceBook {
     var isLoaded: Bool = false
     
     func load(success: (Books)->Void) {
-        
-        if let filePath = Bundle.main.path(forResource: "Res/books", ofType: "json") {
+        print("try to load")
+        if let filePath = Bundle.main.path(forResource: "books", ofType: "json") {
+            print(filePath)
+            print("\n")
             let decoder = JSONDecoder()
             if let data = FileManager.default.contents(atPath: filePath) {
                 do {
-                    try decoder.decode(Books.self, from: data)
+                    let books = try decoder.decode(Books.self, from: data)
+                    print("readed\n")
+                    print(books.books.count)
+                    books.books.forEach {
+                        print("book name: \($0.title)")
+                    }
+                    
+                    print(books.total)
+//                    success()
                 }
-                catch (ex) {
-                    print(ex.)
+                catch {
+                    print(error.localizedDescription)
                 }
             }
         }
         
         
         
-//        success()
+
     }
     
     func get(by id: Int ) {

@@ -84,6 +84,7 @@
 		FA029A9C2094CA0C002BF377 /* BookCaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA029AB22094D8E2002BF377 /* books.json */,
 				FA029AB42094D9DE002BF377 /* Models */,
 				FA029AB12094D8E2002BF377 /* Res */,
 				FA029A9D2094CA0C002BF377 /* AppDelegate.swift */,
@@ -99,7 +100,6 @@
 		FA029AB12094D8E2002BF377 /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				FA029AB22094D8E2002BF377 /* books.json */,
 			);
 			path = Res;
 			sourceTree = "<group>";
