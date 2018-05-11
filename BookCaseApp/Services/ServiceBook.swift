@@ -26,7 +26,7 @@ class ServiceBook {
                     books.dump()
                 }
                 catch {
-                    print(error.localizedDescription)
+                    print("\n\(#function)\n", error.localizedDescription)
                 }
             }
         }
