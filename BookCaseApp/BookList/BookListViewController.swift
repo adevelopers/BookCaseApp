@@ -45,6 +45,7 @@ extension BookListViewController {
         tableView = UITableView(frame: view.frame, style: .grouped)
         tableView.dataSource = self
         tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: BooksListCell.idenificator)
+        tableView.separatorStyle = .none
         view.addSubview(tableView)
     }
 }
@@ -68,9 +69,8 @@ extension BookListViewController: UITableViewDataSource {
         return cell
     }
     
-    
-    
 }
+
 
 
 
