@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaD-R4-xhY">
-                        <rect key="frame" x="113" y="11" width="200" height="17"/>
+                        <rect key="frame" x="103" y="11" width="200" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="tlK-jM-LJB"/>
                         </constraints>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDC-FY-PFa">
-                        <rect key="frame" x="113" y="36" width="200" height="25"/>
+                        <rect key="frame" x="103" y="36" width="200" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="RC3-iF-5jv"/>
                         </constraints>
@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authors" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-c8-Zfw">
-                        <rect key="frame" x="113" y="69" width="200" height="64"/>
+                        <rect key="frame" x="103" y="69" width="200" height="64"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="64" id="q2K-6k-84b"/>
                         </constraints>
@@ -47,9 +47,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRP-1Z-okl">
-                        <rect key="frame" x="5" y="7" width="100" height="128"/>
+                        <rect key="frame" x="5" y="7" width="90" height="128"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="GOY-pz-xnf"/>
+                            <constraint firstAttribute="width" constant="90" id="GOY-pz-xnf"/>
                             <constraint firstAttribute="height" constant="128" id="czO-Vr-xzZ"/>
                         </constraints>
                     </imageView>
