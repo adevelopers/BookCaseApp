@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BooksListCell: UITableViewCell {
     
@@ -26,9 +27,18 @@ class BooksListCell: UITableViewCell {
     }
     
     func configure(book: Book) {
+        backgroundColor = #colorLiteral(red: 0.3294117647, green: 0.3333333333, blue: 0.3450980392, alpha: 1)
         titleLabel.text = book.title
         subtitleLabel.text = book.subtitle
         
+        if
+            let cover = book.cover,
+            let url = URL(string: cover.small)
+        {
+            print("id:", book.id)
+            let resource = ImageResource(downloadURL: url, cacheKey: "key_\(book.id)")
+            thumbnailImageView.kf.setImage(with: resource)
+        }
         authorsLabel.text = book.getAuthorsAsString()
     }
     
