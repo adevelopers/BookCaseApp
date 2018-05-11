@@ -16,6 +16,8 @@ class BooksListCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var authorsLabel: UILabel!
     
+    static let idenificator = "bookListCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

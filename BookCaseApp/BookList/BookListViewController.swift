@@ -44,7 +44,7 @@ extension BookListViewController {
     func configureTableView() {
         tableView = UITableView(frame: view.frame, style: .grouped)
         tableView.dataSource = self
-        tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: "bookListCell")
+        tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: BooksListCell.idenificator)
         view.addSubview(tableView)
     }
 }
@@ -52,13 +52,12 @@ extension BookListViewController {
 extension BookListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count cells -> ", viewModel?.getFiltredCount() ?? 0)
         return viewModel?.getFiltredCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bookListCell") as! BooksListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BooksListCell.idenificator) as! BooksListCell
         if let viewModel = viewModel {
             print(indexPath.row)
             if indexPath.row < viewModel.getFiltredCount() {
