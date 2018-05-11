@@ -16,6 +16,7 @@
 		FA029AB32094D8E2002BF377 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = FA029AB22094D8E2002BF377 /* books.json */; };
 		FA029AB62094D9F9002BF377 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029AB52094D9F9002BF377 /* Book.swift */; };
 		FA029AB82094DC65002BF377 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA029AB72094DC65002BF377 /* Books.swift */; };
+		FA85414220A5BF1800E1E8BE /* Tablable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414120A5BF1800E1E8BE /* Tablable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA029AB22094D8E2002BF377 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		FA029AB52094D9F9002BF377 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FA029AB72094DC65002BF377 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		FA85414120A5BF1800E1E8BE /* Tablable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		FA029A9C2094CA0C002BF377 /* BookCaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA85414020A5BECE00E1E8BE /* Protocols */,
 				FA029AB22094D8E2002BF377 /* books.json */,
 				FA029AB42094D9DE002BF377 /* Models */,
 				FA029AB12094D8E2002BF377 /* Res */,
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA85414220A5BF1800E1E8BE /* Tablable.swift in Sources */,
 				FA029AB62094D9F9002BF377 /* Book.swift in Sources */,
 				FA029AA02094CA0C002BF377 /* BookListViewController.swift in Sources */,
 				FA029A9E2094CA0C002BF377 /* AppDelegate.swift in Sources */,
