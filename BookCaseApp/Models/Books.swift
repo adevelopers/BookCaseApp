@@ -8,15 +8,27 @@
 
 import Foundation
 
-
 class Books: Codable {
     
-    let books: [Book]
+    var books: [Book] = []
     var total: Int = 0
     
 }
-extension Books: Tablable {
-    func getFiltredCount() -> Int {
-        return total
+
+extension Books {
+    func getBadges() -> [String] {
+        return Array(Set(books.flatMap { $0.badges }))
+    }
+    
+    func dump() {
+        print("books count -> ", books.count)
     }
 }
+
+
+extension Books: Tablable {
+    func getFiltredCount() -> Int {
+        return books.count
+    }
+}
+

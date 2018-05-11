@@ -20,6 +20,9 @@ class BookListViewController: UIViewController {
         
         service.load { [weak self] books in
             self?.viewModel = books
+            books.getBadges().forEach {
+                print($0)
+            }
         }
         
     }
@@ -41,6 +44,7 @@ extension BookListViewController {
     func configureTableView() {
         tableView = UITableView(frame: view.frame, style: .grouped)
         tableView.dataSource = self
+        tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: "bookListCell")
         view.addSubview(tableView)
     }
 }
@@ -48,17 +52,24 @@ extension BookListViewController {
 extension BookListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("count cells -> ", viewModel?.getFiltredCount() ?? 0)
         return viewModel?.getFiltredCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "default")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookListCell") as! BooksListCell
         if let viewModel = viewModel {
-            let book = viewModel.books[indexPath.row]
-            cell.textLabel?.text = book.title
+            print(indexPath.row)
+            if indexPath.row < viewModel.getFiltredCount() {
+                let book = viewModel.books[indexPath.row]
+                cell.configure(book: book)
+            }
         }
         return cell
     }
+    
+    
     
 }
 

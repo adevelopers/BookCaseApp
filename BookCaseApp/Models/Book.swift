@@ -9,8 +9,8 @@
 import Foundation
 
 class Cover: Codable {
-    let small: String = ""
-    let large: String = ""
+    var small: String = ""
+    var large: String = ""
 }
 
 class Author: Codable {
@@ -27,11 +27,22 @@ class Book: Codable {
     var title: String = ""
     var subtitle: String = ""
     let bookPartLink: String = ""
-    let badges: [String] = []
+    var badges: [String] = []
     let similarBooks: [String] = []
-    let nav: String = ""
-//    let cover: Cover?
-    let authors: [Author] = []
+    var nav: String = ""
+    var cover: Cover?
+    var authors: [Author] = []
 //    let files: Files?
     
 }
+
+extension Book {
+    func getAuthorsAsString() -> String {
+        var authorsString = ""
+        authors.forEach {
+            authorsString.append( $0.name )
+        }
+        return authorsString
+    }
+}
+
