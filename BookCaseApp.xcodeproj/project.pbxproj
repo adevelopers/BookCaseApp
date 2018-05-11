@@ -19,6 +19,7 @@
 		FA85414220A5BF1800E1E8BE /* Tablable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414120A5BF1800E1E8BE /* Tablable.swift */; };
 		FA85414720A5D20000E1E8BE /* BooksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414520A5D20000E1E8BE /* BooksListCell.swift */; };
 		FA85414820A5D20000E1E8BE /* BooksListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA85414620A5D20000E1E8BE /* BooksListCell.xib */; };
+		FA85414B20A6017D00E1E8BE /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414A20A6017D00E1E8BE /* BookDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA85414120A5BF1800E1E8BE /* Tablable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablable.swift; sourceTree = "<group>"; };
 		FA85414520A5D20000E1E8BE /* BooksListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCell.swift; sourceTree = "<group>"; };
 		FA85414620A5D20000E1E8BE /* BooksListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksListCell.xib; sourceTree = "<group>"; };
+		FA85414A20A6017D00E1E8BE /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				FA85414020A5BECE00E1E8BE /* Protocols */,
 				FA85414320A5C6FE00E1E8BE /* Services */,
 				FA85413F20A5BE4000E1E8BE /* BookList */,
+				FA85414920A5FEF600E1E8BE /* BookDetail */,
 				FA029AB22094D8E2002BF377 /* books.json */,
 				FA029AB42094D9DE002BF377 /* Models */,
 				FA029AA42094CA0F002BF377 /* Assets.xcassets */,
@@ -144,6 +147,14 @@
 				FA85414620A5D20000E1E8BE /* BooksListCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA85414920A5FEF600E1E8BE /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA85414A20A6017D00E1E8BE /* BookDetail.swift */,
+			);
+			path = BookDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA85414220A5BF1800E1E8BE /* Tablable.swift in Sources */,
+				FA85414B20A6017D00E1E8BE /* BookDetail.swift in Sources */,
 				FA029AB62094D9F9002BF377 /* Book.swift in Sources */,
 				FA029AA02094CA0C002BF377 /* BookListViewController.swift in Sources */,
 				FA029A9E2094CA0C002BF377 /* AppDelegate.swift in Sources */,
