@@ -15,3 +15,8 @@ class Books: Codable {
     var total: Int = 0
     
 }
+extension Books: Tablable {
+    func getFiltredCount() -> Int {
+        return total
+    }
+}
