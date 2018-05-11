@@ -59,6 +59,7 @@ extension BookListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BooksListCell.idenificator) as! BooksListCell
+        cell.selectionStyle = .none
         if let viewModel = viewModel {
             if indexPath.row < viewModel.getFiltredCount() {
                 let book = viewModel.books[indexPath.row]
@@ -76,6 +77,7 @@ extension BookListViewController: UITableViewDelegate {
             let book = viewModel.books[indexPath.row]
             let bookDetailViewController = BookDetail(book: book)
             navigationController?.pushViewController(bookDetailViewController, animated: true)
+            
         }
     }
 }
