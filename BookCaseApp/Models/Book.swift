@@ -14,7 +14,7 @@ class Cover: Codable {
 }
 
 class Author: Codable {
-    let name: String = ""
+    var name: String = ""
 }
 
 class Files: Codable {
