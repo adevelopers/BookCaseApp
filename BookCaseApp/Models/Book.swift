@@ -23,7 +23,7 @@ class Files: Codable {
 
 class Book: Codable {
     
-    let id: Int = 0
+    var id: Int = 0
     var title: String = ""
     var subtitle: String = ""
     let bookPartLink: String = ""
