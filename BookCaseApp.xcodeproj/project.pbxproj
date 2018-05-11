@@ -86,16 +86,16 @@
 		FA029A9C2094CA0C002BF377 /* BookCaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA029A9D2094CA0C002BF377 /* AppDelegate.swift */,
 				FA85414020A5BECE00E1E8BE /* Protocols */,
+				FA85414320A5C6FE00E1E8BE /* Services */,
+				FA85413F20A5BE4000E1E8BE /* BookList */,
 				FA029AB22094D8E2002BF377 /* books.json */,
 				FA029AB42094D9DE002BF377 /* Models */,
 				FA029AB12094D8E2002BF377 /* Res */,
-				FA029A9D2094CA0C002BF377 /* AppDelegate.swift */,
-				FA029A9F2094CA0C002BF377 /* BookListViewController.swift */,
 				FA029AA42094CA0F002BF377 /* Assets.xcassets */,
 				FA029AA62094CA0F002BF377 /* LaunchScreen.storyboard */,
 				FA029AA92094CA0F002BF377 /* Info.plist */,
-				FA029AAF2094D876002BF377 /* ServiceBook.swift */,
 			);
 			path = BookCaseApp;
 			sourceTree = "<group>";
@@ -114,6 +114,30 @@
 				FA029AB72094DC65002BF377 /* Books.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA85413F20A5BE4000E1E8BE /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				FA029A9F2094CA0C002BF377 /* BookListViewController.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		FA85414020A5BECE00E1E8BE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA85414120A5BF1800E1E8BE /* Tablable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA85414320A5C6FE00E1E8BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA029AAF2094D876002BF377 /* ServiceBook.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
