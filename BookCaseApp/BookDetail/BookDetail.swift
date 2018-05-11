@@ -16,6 +16,7 @@ class BookDetail: UIViewController {
     
     convenience init(book: Book) {
         self.init()
+        viewModel = book
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
     }
@@ -29,8 +30,15 @@ class BookDetail: UIViewController {
             let resource = ImageResource(downloadURL: url, cacheKey: "large_\(viewModel.id)")
             coverImageView.kf.setImage(with: resource)
             view.addSubview(coverImageView)
+            coverImageView.center = view.center
         }
         
+        let tap = UIGestureRecognizer(target: self, action: #selector(close))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func close() {
+        navigationController?.popViewController(animated: true)
     }
     
 }

@@ -39,11 +39,11 @@ class BookListViewController: UIViewController {
     
 }
 
-
 extension BookListViewController {
     func configureTableView() {
         tableView = UITableView(frame: view.frame, style: .grouped)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: BooksListCell.idenificator)
         tableView.separatorStyle = .none
         view.addSubview(tableView)
@@ -60,7 +60,6 @@ extension BookListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BooksListCell.idenificator) as! BooksListCell
         if let viewModel = viewModel {
-            print(indexPath.row)
             if indexPath.row < viewModel.getFiltredCount() {
                 let book = viewModel.books[indexPath.row]
                 cell.configure(book: book)
@@ -71,6 +70,14 @@ extension BookListViewController: UITableViewDataSource {
     
 }
 
-
+extension BookListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewModel = viewModel {
+            let book = viewModel.books[indexPath.row]
+            let bookDetailViewController = BookDetail(book: book)
+            navigationController?.pushViewController(bookDetailViewController, animated: true)
+        }
+    }
+}
 
 
