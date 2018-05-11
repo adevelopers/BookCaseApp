@@ -32,7 +32,7 @@ class Book: Codable {
     var nav: String = ""
     var cover: Cover?
     var authors: [Author] = []
-//    let files: Files?
+//    let files: Files? //-// "files":{"ebook":true}
     
 }
 
