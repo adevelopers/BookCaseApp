@@ -32,7 +32,7 @@ class BookListViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         configureSearchBar()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = #colorLiteral(red: 0.3294117647, green: 0.3333333333, blue: 0.3450980392, alpha: 1)
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,7 +43,11 @@ class BookListViewController: UIViewController {
 
 extension BookListViewController {
     func configureTableView() {
-        tableView = UITableView(frame: view.frame, style: .grouped)
+        
+        tableView = UITableView(frame: CGRect(x: 0, y: 120,
+                                              width: view.frame.width,
+                                              height: view.frame.height - 120),
+                                style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register( UINib(nibName: "BooksListCell", bundle: nil), forCellReuseIdentifier: BooksListCell.idenificator)
@@ -86,10 +90,10 @@ extension BookListViewController: UITableViewDelegate {
 
 
 // MARK: - Search Bar
-extension BookListViewController {
+extension BookListViewController: UITextFieldDelegate  {
     func configureSearchBar() {
         let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)  + UIApplication.shared.statusBarFrame.height
-        customSearchBar = UITextField(frame: CGRect(x: 10, y: 10, width: view.frame.width - 20, height: 44))
+        customSearchBar = UITextField(frame: CGRect(x: 5, y: 5, width: view.frame.width - 10, height: 44))
         customSearchBar.textColor = .white
         customSearchBar.textAlignment = .center
         customSearchBar.layer.borderColor = UIColor.white.cgColor
@@ -97,6 +101,8 @@ extension BookListViewController {
         customSearchBar.center.y += offset
         customSearchBar.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged )
         customSearchBar.delegate = self
+        customSearchBar.attributedPlaceholder = NSAttributedString(string: "Find...",
+                                                        attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         view.addSubview(customSearchBar)
     }
 
@@ -109,14 +115,13 @@ extension BookListViewController {
         
         tableView.reloadData()
     }
-}
 
-extension BookListViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         customSearchBar.endEditing(true)
         return false
     }
     
 }
+
+
 
