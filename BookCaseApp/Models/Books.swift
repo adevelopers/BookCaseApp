@@ -24,11 +24,3 @@ extension Books {
         print("books count -> ", books.count)
     }
 }
-
-
-extension Books: Tablable {
-    func getFiltredCount() -> Int {
-        return books.count
-    }
-}
-

@@ -20,6 +20,7 @@
 		FA85414720A5D20000E1E8BE /* BooksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414520A5D20000E1E8BE /* BooksListCell.swift */; };
 		FA85414820A5D20000E1E8BE /* BooksListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA85414620A5D20000E1E8BE /* BooksListCell.xib */; };
 		FA85414B20A6017D00E1E8BE /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414A20A6017D00E1E8BE /* BookDetail.swift */; };
+		FA85414D20A9869A00E1E8BE /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85414C20A9869A00E1E8BE /* BooksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA85414520A5D20000E1E8BE /* BooksListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCell.swift; sourceTree = "<group>"; };
 		FA85414620A5D20000E1E8BE /* BooksListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksListCell.xib; sourceTree = "<group>"; };
 		FA85414A20A6017D00E1E8BE /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		FA85414C20A9869A00E1E8BE /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		FA029AB42094D9DE002BF377 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA85414C20A9869A00E1E8BE /* BooksViewModel.swift */,
 				FA029AB52094D9F9002BF377 /* Book.swift */,
 				FA029AB72094DC65002BF377 /* Books.swift */,
 			);
@@ -285,6 +288,7 @@
 				FA029A9E2094CA0C002BF377 /* AppDelegate.swift in Sources */,
 				FA85414720A5D20000E1E8BE /* BooksListCell.swift in Sources */,
 				FA029AB02094D876002BF377 /* ServiceBook.swift in Sources */,
+				FA85414D20A9869A00E1E8BE /* BooksViewModel.swift in Sources */,
 				FA029AB82094DC65002BF377 /* Books.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
