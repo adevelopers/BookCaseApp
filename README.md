@@ -4,10 +4,10 @@
 
 It's Just Demo App
 
-Platform: iOS
-Development languages: Swift.
-Development Tools: Xcode
-Development Technologies: MVVM
+Platform: iOS.<br/>
+Development languages: Swift.<br/>
+Development Tools: Xcode.<br/>
+Development Technologies: MVVM. <br/>
 
 ### ToDo
 - [x] SearchBar
